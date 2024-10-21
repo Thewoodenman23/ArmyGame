@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Army Idle Game</title>
+    <link rel="stylesheet" href="armygamestyles.css">
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHq6eKkKN6mOHK2XbvBu1E6uhfdbUbzv0cK8RrOn6q3ZkXg3/w8FSJzZ7cNJ5R2YmOhtx9mw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="container">
+        <h1>Army Idle Game</h1>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul class="nav-tabs" role="tablist">
+                <li class="nav-item active" data-tab="dashboard" role="tab" tabindex="0" aria-selected="true">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </li>
+                <li class="nav-item" data-tab="army" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-user-shield"></i> Army
+                </li>
+                <li class="nav-item" data-tab="economy" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-coins"></i> Economy
+                </li>
+                <li class="nav-item" data-tab="territories" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-map-marked-alt"></i> Territories
+                </li>
+                <li class="nav-item" data-tab="research" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-flask"></i> Research
+                </li>
+                <li class="nav-item" data-tab="buildings" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-warehouse"></i> Buildings
+                </li>
+                <li class="nav-item" data-tab="missions" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-clipboard-list"></i> Missions
+                </li>
+                <li class="nav-item" data-tab="achievements" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-award"></i> Achievements
+                </li>
+                <li class="nav-item" data-tab="settings" role="tab" tabindex="0" aria-selected="false">
+                    <i class="fas fa-cogs"></i> Settings
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Content Sections -->
+        <div class="tab-content">
+            <!-- Dashboard Tab -->
+            <div class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <!-- Resources Section -->
+                <div class="resources">
+                    <div class="resource">
+                        <i class="fas fa-coins resource-icon"></i>
+                        <span>Gold: <span id="gold">0</span></span>
+                    </div>
+                    <div class="resource">
+                        <i class="fas fa-apple-alt resource-icon"></i>
+                        <span>Food: <span id="food">0</span></span>
+                    </div>
+                    <div class="resource">
+                        <i class="fas fa-users resource-icon"></i>
+                        <span>Soldiers: <span id="soldiers">0</span></span>
+                    </div>
+                    <div class="resource">
+                        <i class="fas fa-shield-alt resource-icon"></i>
+                        <span>Shield: <span id="shield">0</span></span>
+                    </div>
+                    <div class="resource">
+                        <i class="fas fa-star resource-icon"></i>
+                        <span>Prestige Points: <span id="prestigePoints">0</span></span>
+                    </div>
+                </div>
+                
+                <!-- Recruit Soldiers Button -->
+                <button id="recruitButton" aria-label="Recruit Soldiers">
+                    <i class="fas fa-user-plus"></i> Recruit Soldiers
+                </button>
+                
+                <!-- Prestige Button -->
+                <button id="prestigeButton" aria-label="Perform Prestige">
+                    <i class="fas fa-star"></i> Prestige
+                </button>
+            </div>
+            
+            <!-- Army Tab -->
+            <div class="tab-pane" id="army" role="tabpanel" aria-labelledby="army-tab">
+                <h2>Army Management</h2>
+                <!-- Army Upgrades and Controls -->
+                <div id="armyUpgrades">
+                    <!-- Army Upgrades will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Economy Tab -->
+            <div class="tab-pane" id="economy" role="tabpanel" aria-labelledby="economy-tab">
+                <h2>Economy Management</h2>
+                <!-- Economy Upgrades and Controls -->
+                <div id="economyUpgrades">
+                    <!-- Economy Upgrades will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Territories Tab -->
+            <div class="tab-pane" id="territories" role="tabpanel" aria-labelledby="territories-tab">
+                <h2>Territories</h2>
+                <!-- Territories will be dynamically added here -->
+                <div id="territories">
+                    <!-- Territories will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Research Tab -->
+            <div class="tab-pane" id="research" role="tabpanel" aria-labelledby="research-tab">
+                <h2>Research & Technology</h2>
+                <!-- Research Tree or List -->
+                <div id="researchTree">
+                    <!-- Research options will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Buildings Tab -->
+            <div class="tab-pane" id="buildings" role="tabpanel" aria-labelledby="buildings-tab">
+                <h2>Buildings</h2>
+                <!-- Building Management -->
+                <div id="buildingsList">
+                    <!-- Buildings will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Missions Tab -->
+            <div class="tab-pane" id="missions" role="tabpanel" aria-labelledby="missions-tab">
+                <h2>Missions</h2>
+                <!-- Missions List and Controls -->
+                <div id="missionsList">
+                    <!-- Missions will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Achievements Tab -->
+            <div class="tab-pane" id="achievements" role="tabpanel" aria-labelledby="achievements-tab">
+                <h2>Achievements</h2>
+                <!-- Achievements will be dynamically added here -->
+                <div id="achievements">
+                    <!-- Achievements will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Settings Tab -->
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <h2>Settings</h2>
+                <!-- Sound Controls, Preferences -->
+                <div class="sound-controls">
+                    <label for="mute">Mute Sounds:</label>
+                    <input type="checkbox" id="mute" name="mute">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Faction Selection (Initially Hidden) -->
+        <div class="faction-selection" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="faction-selection-title">
+            <h2 id="faction-selection-title">Choose Your Faction</h2>
+            <div class="factions">
+                <button class="faction-button" data-faction="Romans" aria-label="Choose Romans">
+                    <img src="assets/images/factions/roman.png" alt="Romans">
+                    <span>Romans</span>
+                </button>
+                <button class="faction-button" data-faction="Egyptians" aria-label="Choose Egyptians">
+                    <img src="assets/images/factions/egyptian.png" alt="Egyptians">
+                    <span>Egyptians</span>
+                </button>
+                <button class="faction-button" data-faction="Gauls" aria-label="Choose Gauls">
+                    <img src="assets/images/factions/gaul.png" alt="Gauls">
+                    <span>Gauls</span>
+                </button>
+                <button class="faction-button" data-faction="Vikings" aria-label="Choose Vikings">
+                    <img src="assets/images/factions/viking.png" alt="Vikings">
+                    <span>Vikings</span>
+                </button>
+                <button class="faction-button" data-faction="Spartans" aria-label="Choose Spartans">
+                    <img src="assets/images/factions/spartans.png" alt="Spartans">
+                    <span>Spartans</span>
+                </button>
+                <button class="faction-button" data-faction="Mongols" aria-label="Choose Mongols">
+                    <img src="assets/images/factions/mongol.png" alt="Mongols">
+                    <span>Mongols</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Toast Notifications Container -->
+        <div class="toast-container" aria-live="polite" aria-atomic="true">
+            <!-- Toasts will be dynamically added here -->
+        </div>
+        
+        <!-- Credits Section (Optional) -->
+        <footer class="credits">
+            <p>Sound Effects:</p>
+            <ul>
+                <li>Click Sound by [Author Name] from [Source]. Licensed under [License Type].</li>
+                <li>Upgrade Sound by [Author Name] from [Source]. Licensed under [License Type].</li>
+                <li>Prestige Sound by [Author Name] from [Source]. Licensed under [License Type].</li>
+                <li>Conquer Sound by [Author Name] from [Source]. Licensed under [License Type].</li>
+            </ul>
+        </footer>
+    </div>
+    
+    <!-- JavaScript File -->
+    <script src="armygamescript.js" defer></script>
+</body>
+</html>
