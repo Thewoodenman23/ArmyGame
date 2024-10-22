@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Army Idle Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Army Idle Game</h1>
+            <!-- Navigation Bar -->
+            <nav class="navbar" aria-label="Main Navigation">
+                <ul class="nav-tabs" role="tablist">
+                    <li class="nav-item active" data-tab="dashboard" role="tab" aria-selected="true" tabindex="0">Dashboard</li>
+                    <li class="nav-item" data-tab="upgrades" role="tab" aria-selected="false" tabindex="0">Upgrades</li>
+                    <li class="nav-item" data-tab="territories" role="tab" aria-selected="false" tabindex="0">Territories</li>
+                    <li class="nav-item" data-tab="research" role="tab" aria-selected="false" tabindex="0">Research</li>
+                    <li class="nav-item" data-tab="buildings" role="tab" aria-selected="false" tabindex="0">Buildings</li>
+                    <li class="nav-item" data-tab="missions" role="tab" aria-selected="false" tabindex="0">Missions</li>
+                    <li class="nav-item" data-tab="achievements" role="tab" aria-selected="false" tabindex="0">Achievements</li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="tab-content">
+                <!-- Dashboard Tab -->
+                <section class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- Resources Section -->
+                    <div class="resources">
+                        <div class="resource">
+                            <img src="assets/images/Resources/coin.png" alt="Gold" class="resource-icon">
+                            <span>Gold: <span id="gold">0</span></span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/images/Resources/food.png" alt="Food" class="resource-icon">
+                            <span>Food: <span id="food">0</span></span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/images/Resources/soldier.png" alt="Soldiers" class="resource-icon">
+                            <span>Soldiers: <span id="soldiers">0</span></span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/images/Resources/shield.png" alt="Shield" class="resource-icon">
+                            <span>Shield: <span id="shield">0</span></span>
+                        </div>
+                        <div class="resource">
+                            <img src="assets/images/Resources/coin.png" alt="Prestige Points" class="resource-icon">
+                            <span>Prestige Points: <span id="prestigePoints">0</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Recruit Soldiers Button -->
+                    <button id="recruitButton" aria-label="Recruit Soldiers">
+                        <i class="fas fa-user-plus"></i> Recruit Soldiers
+                    </button>
+
+                    <!-- Prestige Button -->
+                    <button id="prestigeButton" aria-label="Perform Prestige">
+                        <i class="fas fa-star"></i> Prestige
+                    </button>
+                </section>
+
+                <!-- Upgrades Tab -->
+                <section class="tab-pane" id="upgrades" role="tabpanel" aria-labelledby="upgrades-tab">
+                    <div id="armyUpgrades"></div>
+                    <div id="economyUpgrades"></div>
+                </section>
+
+                <!-- Territories Tab -->
+                <section class="tab-pane" id="territories" role="tabpanel" aria-labelledby="territories-tab">
+                    <div id="territoriesGrid" class="territories-grid"></div>
+                </section>
+
+                <!-- Research Tab -->
+                <section class="tab-pane" id="research" role="tabpanel" aria-labelledby="research-tab">
+                    <div id="researchTree"></div>
+                </section>
+
+                <!-- Buildings Tab -->
+                <section class="tab-pane" id="buildings" role="tabpanel" aria-labelledby="buildings-tab">
+                    <div id="buildingsList"></div>
+                </section>
+
+                <!-- Missions Tab -->
+                <section class="tab-pane" id="missions" role="tabpanel" aria-labelledby="missions-tab">
+                    <div id="missionsList"></div>
+                </section>
+
+                <!-- Achievements Tab -->
+                <section class="tab-pane" id="achievements" role="tabpanel" aria-labelledby="achievements-tab">
+                    <div id="achievementsDiv"></div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Faction Selection (Initially Hidden) -->
+        <div class="faction-selection" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="faction-selection-title">
+            <h2 id="faction-selection-title">Choose Your Faction</h2>
+            <div class="factions">
+                <button class="faction-button" data-faction="Romans" aria-label="Choose Romans">
+                    <img src="assets/images/Factions/roman.png" alt="Romans">
+                    <span>Romans</span>
+                </button>
+                <button class="faction-button" data-faction="Egyptians" aria-label="Choose Egyptians">
+                    <img src="assets/images/Factions/egyptian.png" alt="Egyptians">
+                    <span>Egyptians</span>
+                </button>
+                <button class="faction-button" data-faction="Gauls" aria-label="Choose Gauls">
+                    <img src="assets/images/Factions/gaul.png" alt="Gauls">
+                    <span>Gauls</span>
+                </button>
+                <button class="faction-button" data-faction="Vikings" aria-label="Choose Vikings">
+                    <img src="assets/images/Factions/viking.png" alt="Vikings">
+                    <span>Vikings</span>
+                </button>
+                <button class="faction-button" data-faction="Spartans" aria-label="Choose Spartans">
+                    <img src="assets/images/Factions/spartans.png" alt="Spartans">
+                    <span>Spartans</span>
+                </button>
+                <button class="faction-button" data-faction="Mongols" aria-label="Choose Mongols">
+                    <img src="assets/images/Factions/mongol.png" alt="Mongols">
+                    <span>Mongols</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Toast Notifications Container -->
+        <div class="toast-container" aria-live="polite" aria-atomic="true">
+            <!-- Toasts will be dynamically added here -->
+        </div>
+
+        <!-- Footer (Optional) -->
+        <footer class="credits">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

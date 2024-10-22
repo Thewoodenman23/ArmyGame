@@ -1,0 +1,44 @@
+Folder PATH listing for volume Windows
+Volume serial number is 20EB-9B58
+C:.
+³   directory_structure.txt
+³   index.html
+³   README.md
+³   
+ÃÄÄÄassets
+³   ÃÄÄÄimages
+³   ³   ³   placeholder.png
+³   ³   ³   
+³   ³   ÃÄÄÄFactions
+³   ³   ³       egyptian.png
+³   ³   ³       gaul.png
+³   ³   ³       mongol.png
+³   ³   ³       roman.png
+³   ³   ³       spartans.png
+³   ³   ³       viking.png
+³   ³   ³       
+³   ³   ÀÄÄÄResources
+³   ³           coin.png
+³   ³           food.png
+³   ³           shield.png
+³   ³           soldier.png
+³   ³           territory.png
+³   ³           
+³   ÀÄÄÄsounds
+³           building.mp3
+³           click.mp3
+³           conquer.mp3
+³           mission.mp3
+³           prestige.wav
+³           research.mp3
+³           upgrade.mp3
+³           
+ÃÄÄÄcss
+³       styles.css
+³       
+ÀÄÄÄjs
+        entities.js
+        gameState.js
+        main.js
+        utils.js
+        
